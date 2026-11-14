@@ -75,7 +75,10 @@ HuffmanData GenerateHuffmanData(const string& filename){
     std::copy(codes, codes + 256, data.codes); //this copy all 256 strings into data.codes. normally assigning is not possible in cpp.
     data.root = root;
 
+    file.close();
+
     
    return data;
        
 }
+

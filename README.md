@@ -291,5 +291,5 @@ The final objective is to build a working command-line utility capable of:
 
 This project is a practical exploration of Data Structures, Algorithms, and C++ programming through implementation rather than theory alone.
 
-**Author**
+**Author:**
 Chetan Vashistha
