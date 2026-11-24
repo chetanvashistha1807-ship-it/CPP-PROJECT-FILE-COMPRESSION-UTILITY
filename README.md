@@ -219,3 +219,7 @@ If the comparison reports no differences, the restored file is byte-for-byte ide
 The completed utility brings several DSA topics together in one program: a greedy algorithm builds a binary tree, a min-heap priority queue selects nodes efficiently, recursion generates codes and manages the tree, and pointers connect dynamically allocated nodes. Arrays provide direct byte-frequency and code lookup, while bit manipulation and binary file I/O turn the generated codes into an actual compressed file.
 
 The emphasis of this project is not on building a production-grade archiver or chasing the highest possible compression ratio. It is on understanding how data structures and algorithms work together when implemented in C++ to solve a practical problem.
+
+---
+
+**Author: Chetan Vashistha**
