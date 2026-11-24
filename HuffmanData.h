@@ -1,13 +1,13 @@
 #pragma once
-#include<string>
-#include"HuffmanTree.h"
-using namespace std;
+#include <cstdint>
+#include <string>
+#include "Node.h"
 
-struct HuffmanData{
-    Node* root;
-    int frequency[256];
-    string codes[256];
-
+struct HuffmanData {
+    Node* root = nullptr;
+    std::uint64_t frequency[256] = {};
+    std::string codes[256];
+    std::uint64_t originalSize = 0;
 };
 
-HuffmanData GenerateHuffmanData(const string& filename); //definition of this function is in Huffmantree.cpp file
+HuffmanData GenerateHuffmanData(const std::string& filename);

@@ -1,8 +1,9 @@
 #pragma once
-#include"Node.h"
-#include"Compare.h"
-#include<string>
-using namespace std;
+#include "Node.h"
+#include "Compare.h"
+#include <cstdint>
+#include <string>
 
-Node* BuildHuffmanTree(const int frequency[256]);
-void GenerateCodes(Node* root, string code, string codes[256]);
+Node* BuildHuffmanTree(const std::uint64_t frequency[256]);
+void GenerateCodes(Node* root, const std::string& code, std::string codes[256]);
+void DeleteTree(Node* root);

@@ -2,7 +2,7 @@
 #include "Node.h"
 
 struct Compare {
-    bool operator()(Node* a, Node* b) {
-        return a->frequency > b->frequency;   //this will work as a comparator in our priority queue.
+    bool operator()(const Node* a, const Node* b) const {
+        return a->frequency > b->frequency;
     }
 };
