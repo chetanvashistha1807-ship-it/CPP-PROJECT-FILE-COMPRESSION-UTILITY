@@ -1,11 +1,11 @@
 #pragma once
+#include <cstdint>
 
-struct Node{
+struct Node {
     unsigned char character;
-    int frequency;
-
+    std::uint64_t frequency;
     Node* left;
     Node* right;
 
-    Node(unsigned char ch, int freq);
+    Node(unsigned char ch, std::uint64_t freq);
 };
