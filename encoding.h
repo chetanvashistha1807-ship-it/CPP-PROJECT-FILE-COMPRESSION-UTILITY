@@ -6,11 +6,8 @@
 #include"HuffmanTree.h"
 using namespace std;
 
-void writeBytes(const string& codes){
-    ofstream outputFile("compressed.bin",ios::binary);
-    if (!outputFile.is_open()) {
-    throw runtime_error("Unable to open compressed file");  
-     }
+void writeBytes(const string& codes, ofstream &outputFile){
+   
     unsigned char byte = 0;
 
     int iteration = 0;
@@ -34,20 +31,22 @@ void writeBytes(const string& codes){
       outputFile.put(byte);
     }
 
-    outputFile.close();
 }
 
 void encodeFile(const string& filename){
+   ofstream outputFile("compressed.bin", ios::binary);
    HuffmanData data = GenerateHuffmanData(filename);
    ifstream file(filename, ios::binary);
    string encoded;
    char ch;
    while(file.get(ch)){
     unsigned char byte = ch;
-    encoded += data.codes[byte];
+    encoded += data.codes[byte]; //append not overwrite
     
    }
 
-   writeBytes(encoded);
+   writeBytes(encoded, outputFile);
+   outputFile.close();
 
 }
+
